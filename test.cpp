@@ -10,12 +10,14 @@ int main() {
 	graph.insert(Edge(1, 2));
 
 	graph.print();
+	cout << endl;
 
 	graph.remove(Edge(1, 2));
 	graph.add();
 
 	graph.print();
     
+    /*
     AdjList adjList = AdjList(5, false);
     
     adjList.insert(Edge(1, 2));
@@ -29,6 +31,7 @@ int main() {
     adjList.insert(Edge(1, 2));
     
     adjList.print();
+    */
 
 	return 0;
 }
