@@ -20,7 +20,7 @@ public:
     }
     
     int operator[] (int v) const { return degree[v]; }
-}
+};
 
 /* Simple Path Search
  *

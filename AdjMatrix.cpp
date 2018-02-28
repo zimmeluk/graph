@@ -33,6 +33,22 @@ void AdjMatrix::remove(Edge e) {
 	if (!dir) adj[w][v] = false;
 }
 
+void AdjMatrix::add() {
+	int v = num_V; num_V++;
+	adj.push_back(v);
+
+	// assign all vertices a value of 0
+	adj[v].assign(num_V, 0);
+	for (int i = 0; i < num_V - 1; i++) {
+		adj[i][v] = 0;
+	}
+
+}
+
+void AdjMatrix::delete(int v) {
+
+}
+
 bool AdjMatrix::edge(int v, int w) const {
 	return adj[v][w];
 }
@@ -44,10 +60,10 @@ void AdjMatrix::print() {
 		cout << "  " << i++;
 	}
 	cout << endl;
-	cout << "----------" << endl;
+	cout << "--------|" << endl;
 
 	for (int i = 0; i < adj[0].size(); i++) {
-		cout << "  " << i << "\t|";
+		cout << " " << i << "\t|";
 		for (auto it = adj[i].begin(); it != adj[i].end(); it++) {
 			cout << "  " << *it;
 		}

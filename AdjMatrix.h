@@ -27,6 +27,8 @@ public:
 	bool directed() const;
 	void insert(Edge);
 	void remove(Edge);
+	void add(int);
+	void delete(int);
 	bool edge(int, int) const;
 	void print();
 
